@@ -1,0 +1,198 @@
+$text: #2e293c;
+$secondary: #a09da6;
+
+html,
+body {
+  font-family: "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.testimonial-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 670px;
+    height: 450px;
+    background: #f2f2f6;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    z-index: -10;
+  }
+
+  .testimonial-container {
+    width: 1280px;
+    min-width: 1280px;
+    height: 680px;
+    position: relative;
+
+    .arrows {
+      position: absolute;
+      display: flex;
+      width: 100px;
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
+      top: 0;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: .3s ease-in-out;
+      &:hover {
+        box-shadow: 0px 0px 30px rgba(0, 0, 80, 0.05);
+      }
+      &.right {
+        right: 0;
+        }
+    }
+    
+    .inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 600px;
+
+      .t-image {
+        width: 500px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          background-color: #3f56da;
+          left: 140px;
+          top: 0;
+          border-radius: 100%;
+          z-index: -9;
+        }
+        
+
+        ul {
+          display: flex;
+          position: absolute;
+          overflow: hidden;
+          height: 460px;
+          width: 340px;
+          box-shadow: 0px 0px 40px rgba(0,0,10,0.25);
+          
+          li {
+            height: 460px;
+            width: 100%;
+
+            img {
+              height: 460px;
+              width: 340;
+
+            }
+          }
+        }
+      }
+      
+      .t-content {
+        width: 500px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+
+        ul {
+          position: absolute;
+          overflow: hidden;
+          width: 500px;
+          height: 400px;
+
+          li {
+            width: 500px;
+            height: 400px;
+            color: $text;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            opacity: 0;
+
+            &:nth-child(1) {
+              opacity: 1;
+
+              &:after {
+                content: "";
+                position: absolute;
+                height: 12px;
+                width: 312px;
+                background: $text;
+                opacity: 0.2;
+                left: 0;
+                top: 196px;
+              }
+            }
+
+            &:nth-child(2) {
+              &:after {
+                content: "";
+                position: absolute;
+                height: 12px;
+                width: 144px;
+                background: $text;
+                opacity: 0.2;
+                left: 56px;
+                top: 115px;
+              }
+            }
+
+            &:nth-child(3) {
+              &:after {
+                content: "";
+                position: absolute;
+                height: 12px;
+                width: 270px;
+                background: $text;
+                opacity: 0.2;
+                left: 152px;
+                top: 156px;
+              }
+            }
+
+            .content-inner {
+              width: 500px;
+
+              .quote {
+                font-size: 26px;
+                letter-spacing: 0.88px;
+                line-height: 40px;
+                font-weight: 700;
+                margin-bottom: 16px;
+              }
+              
+              .name {
+                letter-spacing: 0.88px;
+                font-size: 18px;
+                line-height: 28px;
+                color: $secondary;
+                font-weight: 600;
+              }
+              
+              .title {
+                letter-spacing: 0.88px;
+                font-size: 18px;
+                line-height: 28px;
+                color: $secondary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
