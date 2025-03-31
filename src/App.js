@@ -1,5 +1,6 @@
 
 import Balls from './pages/Balls';
+import Hero from './pages/Hero';
 import Picture from './pages/Picture';
 import Slider from './pages/Slider';
 
@@ -8,7 +9,8 @@ function App() {
     <div>
       {/* <Balls /> */}
       {/* <Picture /> */}
-      <Slider />
+      {/* <Slider /> */}
+      <Hero />
     </div>
   );
 }
